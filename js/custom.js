@@ -47,23 +47,23 @@ const totalImages = images.length;
 let index = 0;
 
 // Clone the first image and append it to the end of the slides
-const firstImageClone = images[0].cloneNode(true);
-slides.appendChild(firstImageClone);
+// const firstImageClone = images[0].cloneNode(true);
+// slides.appendChild(firstImageClone);
 
-function showNextImage() {
-    index++;
-    slides.style.transition = 'transform 0.5s ease-in-out';
-    slides.style.transform = `translateX(${-index * 100}%)`;
+// function showNextImage() {
+//     index++;
+//     slides.style.transition = 'transform 0.5s ease-in-out';
+//     slides.style.transform = `translateX(${-index * 100}%)`;
 
-    // If it's the clone, reset the index and the transition
-    if (index === totalImages) {
-        setTimeout(() => {
-            slides.style.transition = 'none';
-            index = 0;
-            slides.style.transform = `translateX(0)`;
-        }, 500); // Time must match the transition time
-    }
-}
+//     // If it's the clone, reset the index and the transition
+//     if (index === totalImages) {
+//         setTimeout(() => {
+//             slides.style.transition = 'none';
+//             index = 0;
+//             slides.style.transform = `translateX(0)`;
+//         }, 500); // Time must match the transition time
+//     }
+// }
 
-// Change image every 3 seconds
-setInterval(showNextImage, 5000);
+// // Change image every 3 seconds
+// setInterval(showNextImage, 5000);
